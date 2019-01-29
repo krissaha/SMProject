@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18078" started-at="2019-01-29T11:44:46Z" finished-at="2019-01-29T11:45:04Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18078" started-at="2019-01-29T11:44:46Z" finished-at="2019-01-29T11:45:04Z">
+      <class name="com.qa.smp.testcase.TestLogin">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.qa.smp.testcase.TestLogin@13deb50e]" name="init" is-config="true" duration-ms="10489" started-at="2019-01-29T11:44:46Z" finished-at="2019-01-29T11:44:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="validLogin()[pri:1, instance:com.qa.smp.testcase.TestLogin@13deb50e]" name="validLogin" duration-ms="6994" started-at="2019-01-29T11:44:57Z" finished-at="2019-01-29T11:45:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="invalidLogin()[pri:2, instance:com.qa.smp.testcase.TestLogin@13deb50e]" name="invalidLogin" duration-ms="1" started-at="2019-01-29T11:45:04Z" finished-at="2019-01-29T11:45:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.smp.testcase.TestLogin@13deb50e]" name="tearDown" is-config="true" duration-ms="573" started-at="2019-01-29T11:45:04Z" finished-at="2019-01-29T11:45:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.smp.testcase.TestLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
