@@ -21,7 +21,9 @@ public class TestLogin extends TestBase
 		lp.verify_logo_loginpage();
 		lp.verify_termsofuse();
 		u = new Util(prop.getProperty("Excelpath"));
-		cc = lp.logIn(Util.vloginemail(1, 1, 0), Util.vloginemail(1, 1, 1) );
+		//cc = lp.logIn(Util.vloginemail(1, 1, 0), Util.vloginemail(1, 1, 1) );
+		//log in with valid emal n valid pass
+		lp.login("valid User","valid pass");
 		
 		
 	}
@@ -30,7 +32,7 @@ public class TestLogin extends TestBase
 	public void invalidLogin()
 	{
 		
-		
+		lp.login("invalid User","invalid pass");
 	}
 
 	

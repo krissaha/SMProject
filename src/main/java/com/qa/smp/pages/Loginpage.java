@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.qa.smp.pages.CustomerCorporatePage;
+import com.qa.smp.util.UtillTest;
 import com.qa.smp.base.TestBase;
 
 
@@ -34,16 +35,16 @@ public class Loginpage extends TestBase
 		}
 	
 	// Business Components Methods
-	public CustomerCorporatePage logIn(String em, String psd) throws Exception
-	{
-		email.sendKeys(em);
-		password.sendKeys(psd);
-		String hiddenCaptchaVal = driver.findElement(By.id("HiddenCaptcha")).getAttribute("value");
-		driver.findElement(By.id("Captcha")).sendKeys(hiddenCaptchaVal);
-		loginBtn.click();
-		Thread.sleep(5000);
-		return new CustomerCorporatePage();
-	}
+//	public CustomerCorporatePage logIn(String em, String psd) throws Exception
+//	{
+//		email.sendKeys(em);
+//		password.sendKeys(psd);
+//		String hiddenCaptchaVal = driver.findElement(By.id("HiddenCaptcha")).getAttribute("value");
+//		driver.findElement(By.id("Captcha")).sendKeys(hiddenCaptchaVal);
+//		loginBtn.click();
+//		Thread.sleep(5000);
+//		return new CustomerCorporatePage();
+//	}
 	
 	// All Verifications and Validations
 	public void verify_loginpage_title()
@@ -63,6 +64,12 @@ public class Loginpage extends TestBase
 		boolean tuse =termsofuse.isDisplayed();
 		Assert.assertEquals(tuse, true);
 		
+	}
+	
+	public void login(String validUser, String validPass)
+	{
+		UtillTest util = new UtillTest();
+		String email = util.readData("loginData", validUser);
 	}
 	
 }

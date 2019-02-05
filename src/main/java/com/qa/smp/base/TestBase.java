@@ -12,7 +12,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import com.qa.smp.util.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class TestBase {
 	public static WebDriver driver;
@@ -24,7 +24,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			FileInputStream fi;
-			fi = new FileInputStream("E:/Selenium/SMProject/src/main/java/com/qa/smp/config/Config.properties");
+			fi = new FileInputStream("C:\\Users\\DELL\\eclipse-workspace\\SMProject\\src\\main\\java\\com\\qa\\smp\\config\\Config.properties");
 			prop.load(fi);
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
@@ -34,14 +34,14 @@ public class TestBase {
 		// Browser Initialization
 		String browser = prop.getProperty("Browser");
 		if (browser.equals("CHROME")) {
-			System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\\\Krishnendu\\\\Selenium\\\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equals("FF")) {
 			System.setProperty("webdriver.gecko.driver", "E:\\\\Selenium\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else if (browser.equals("IE")) {
-			WebDriverManager.iedriver().setup();
-			driver = new InternetExplorerDriver();
+//			WebDriverManager.iedriver().setup();
+//			driver = new InternetExplorerDriver();
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
